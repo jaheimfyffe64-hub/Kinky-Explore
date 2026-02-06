@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinky Explore Members Area</title>
+<style>
+body{font-family:Arial,sans-serif;background:#111;color:#fff;text-align:center;padding:50px}
+#content{display:none}
+input{padding:12px;margin:10px;border-radius:6px;border:none}
+button{padding:10px 20px;border:none;border-radius:6px;background:#ff4da6;font-weight:bold;color:#000;cursor:pointer}
+iframe{margin:20px 0;border:none}
+</style>
+</head>
+<body>
+
+<h1>Welcome to Kinky Explore Members Area</h1>
+
+<input type="password" id="password" placeholder="Enter password">
+<button onclick="checkPassword()">Enter</button>
+
+<div id="content">
+  <h2>Exclusive Videos</h2>
+  <p>Here are your members-only videos:</p>
+  <p>Placeholder videos. Add your Google Drive links when ready.</p>
+  <iframe width="640" height="360" src="https://drive.google.com/file/d/YOUR_VIDEO_ID/preview" allow="autoplay" allowfullscreen></iframe>
+  <iframe width="640" height="360" src="https://drive.google.com/file/d/YOUR_VIDEO_ID_2/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+
+<script>
+function checkPassword(){
+  var pw = document.getElementById('password').value;
+  if(pw==='kinkyexplore18'){
+    document.getElementById('content').style.display='block';
+  } else { alert('Incorrect password'); }
+}
+</script>
+
+</body>
+</html>

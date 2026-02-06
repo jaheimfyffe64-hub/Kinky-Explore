@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinky Explore</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#111,#3a0f2e,#5a1a3c);color:#fff;text-align:center}
+#age-warning{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999}
+button{padding:12px 24px;margin:10px;border:none;border-radius:8px;font-weight:bold;cursor:pointer}
+h1,h2{margin:10px}
+.container{padding:50px}
+</style>
+</head>
+<body>
+
+<div id="age-warning">
+  <h1>18+ ONLY</h1>
+  <p>This website contains adult content. You must be 18+ to enter.</p>
+  <button onclick="document.getElementById('age-warning').style.display='none'">I am 18+ – Enter</button>
+  <button onclick="window.location.href='https://www.google.com'">Leave</button>
+</div>
+
+<div class="container">
+<h1>Kinky Explore</h1>
+<p>Exclusive videos. Subscribe to unlock full content.</p>
+
+<h2>Monthly Subscription</h2>
+<div id="paypal-button-container-P-8FP93067UJ487332LNGCUJ3Q"></div>
+
+<h2>Quarterly Subscription</h2>
+<div id="paypal-button-container-P-5KB03931VP507734PNGCUOAA"></div>
+
+<h2>Yearly Subscription</h2>
+<div id="paypal-button-container-P-542997799E969990NNGCUQHA"></div>
+</div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=AYUItp6vLXnhgzt3Zhtn2wbZ8rN1ysZkWe6EQk2dkJgI_54Im6OiTTE0WsiouIQj6KmVQwQshH2qVRTt&vault=true&intent=subscription"></script>
+
+<script>
+paypal.Buttons({
+    style:{shape:'rect',color:'gold',layout:'vertical',label:'subscribe'},
+    createSubscription:function(data,actions){return actions.subscription.create({plan_id:'P-8FP93067UJ487332LNGCUJ3Q',quantity:1})},
+    onApprove:function(data,actions){window.location.href='kinkyexplore_success.html'}
+}).render('#paypal-button-container-P-8FP93067UJ487332LNGCUJ3Q');
+
+paypal.Buttons({
+    style:{shape:'pill',color:'silver',layout:'vertical',label:'subscribe'},
+    createSubscription:function(data,actions){return actions.subscription.create({plan_id:'P-5KB03931VP507734PNGCUOAA',quantity:1})},
+    onApprove:function(data,actions){window.location.href='kinkyexplore_success.html'}
+}).render('#paypal-button-container-P-5KB03931VP507734PNGCUOAA');
+
+paypal.Buttons({
+    style:{shape:'rect',color:'silver',layout:'vertical',label:'subscribe'},
+    createSubscription:function(data,actions){return actions.subscription.create({plan_id:'P-542997799E969990NNGCUQHA',quantity:1})},
+    onApprove:function(data,actions){window.location.href='kinkyexplore_success.html'}
+}).render('#paypal-button-container-P-542997799E969990NNGCUQHA');
+</script>
+
+</body>
+</html>
